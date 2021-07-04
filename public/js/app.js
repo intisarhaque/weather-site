@@ -22,8 +22,9 @@ weatherForm.addEventListener('submit', (event)=>{
         }else{
             messageOne.textContent = ""
             messageTwo.textContent = ""
-            console.log(data.forecast)
-            messageOne.textContent = "The temperature in " + location.charAt(0).toUpperCase()+ location.slice(1) + " is " + data.forecast.temp
+            console.log(data.forecast.total)
+            messageOne.textContent = "The temperature in " + location.charAt(0).toUpperCase()+ location.slice(1) + " is " + data.forecast.total.temperature
+            messageTwo.textContent = "The forecast is " + data.forecast.total.weather_descriptions[0]
         }
     })
 })
